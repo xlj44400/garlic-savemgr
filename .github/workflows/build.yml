@@ -2,8 +2,15 @@ name: Build and Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    paths-ignore:
+      - "**/*.md"
+      - "**/*.txt"
+  pull_request:
+    paths-ignore:
+      - "**/*.md"
+      - "**/*.txt"
+  workflow_dispatch:
+
 
 permissions:
   contents: write
