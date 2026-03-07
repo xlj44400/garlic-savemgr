@@ -144,7 +144,7 @@ static void scan_saves(void) {
         while ((ue = readdir(home))) {
             if (ue->d_name[0] == '.') continue;
             char prospero[MAX_PATH_LEN];
-            snprintf(prospero, sizeof(prospero), "/user/home/%s/savedata_prospero", ue->d_name);
+            snprintf(prospero, sizeof(prospero), "/user/home/%s/savedata", ue->d_name);
             scan_savedata_prospero(prospero);
         }
         closedir(home);
@@ -1838,3 +1838,4 @@ int main(void) {
 
     return 0;
 }
+
